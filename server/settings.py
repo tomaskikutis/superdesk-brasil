@@ -10,6 +10,7 @@
 # at https://www.sourcefabric.org/superdesk/license
 
 import os
+from flask import json
 from pathlib import Path
 
 
@@ -53,3 +54,53 @@ if env('REDIS_PORT'):
 BROKER_URL = env('CELERY_BROKER_URL', REDIS_URL)
 
 SECRET_KEY = env('SECRET_KEY', '')
+PUBLISH_ASSOCIATED_ITEMS = True
+
+CONTENT_EXPIRY_MINUTES = 60 * 24 * 7  # 1w
+PUBLISHED_CONTENT_EXPIRY_MINUTES = 60 * 24 * 30
+AUDIT_EXPIRY_MINUTES = PUBLISHED_CONTENT_EXPIRY_MINUTES
+CONTENT_API_EXPIRY_DAYS = 15
+
+with open(os.path.join(os.path.dirname(__file__), 'picture-profile.json')) as profile_json:
+    picture_profile = json.load(profile_json)
+
+EDITOR = {
+    "picture": picture_profile['editor'],
+}
+
+SCHEMA = {
+    "picture": picture_profile['schema'],
+}
+
+# media required fields
+VALIDATOR_MEDIA_METADATA = {
+    "headline": {
+        "required": False,
+    },
+    "alt_text": {
+        "required": False,
+    },
+    "archive_description": {
+        "required": False,
+    },
+    "description_text": {
+        "required": False,
+    },
+    "copyrightholder": {
+        "required": False,
+    },
+    "byline": {
+        "required": False,
+    },
+    "usageterms": {
+        "required": False,
+    },
+    "copyrightnotice": {
+        "required": False,
+    },
+
+}
+
+PUBLISH_QUEUE_EXPIRY_MINUTES = 60 * 24 * 15 # 15d
+
+
