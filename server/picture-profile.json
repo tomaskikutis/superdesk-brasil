@@ -1,0 +1,82 @@
+{
+  "schema":{
+    "sign_off":null,
+    "footer":null,
+    "language":null,
+    "anpa_category":null,
+    "subject":null,
+    "slugline":null,
+    "pdf":null,
+    "usageterms":null,
+    "authors":null,
+    "body_footer":null,
+    "feature_media":null,
+    "abstract":null,
+    "byline": {
+      "required": false,
+      "type": "string",
+      "nullable": true
+    },
+    "feat2":null,
+    "keywords":null,
+    "dateline":null,
+    "company_codes":null,
+    "anpa_take_key":null,
+    "media_description":null,
+    "place":null,
+    "urgency":null,
+    "headline":{
+      "type":"string",
+      "minlength":2,
+      "maxlength":250,
+      "nullable":false,
+      "required":true
+    },
+    "ednote":null,
+    "sms":null,
+    "genre":null,
+    "tweet_url":null,
+    "priority":null,
+    "body_html":null
+  },
+  "editor": {
+    "sign_off": null,
+    "footer": null,
+    "language": null,
+    "anpa_category": null,
+    "subject": null,
+    "slugline": null,
+    "pdf": null,
+    "usageterms": null,
+    "authors": null,
+    "body_footer": null,
+    "feature_media": null,
+    "abstract": null,
+    "byline": {
+      "order": 2
+    },
+    "feat2": null,
+    "keywords": null,
+    "dateline": null,
+    "company_codes": null,
+    "anpa_take_key": null,
+    "media_description": null,
+    "place": null,
+    "urgency": null,
+    "headline": {
+      "order": 1,
+      "formatOptions": [
+        "underline",
+        "link",
+        "bold"
+      ]
+    },
+    "ednote": null,
+    "sms": null,
+    "genre": null,
+    "tweet_url": null,
+    "priority": null,
+    "body_html": null
+  }
+}
+
