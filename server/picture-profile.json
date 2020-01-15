@@ -4,7 +4,7 @@
     "footer":null,
     "language":null,
     "anpa_category":null,
-    "subject":null,
+    "subject":{},
     "slugline":null,
     "pdf":null,
     "usageterms":null,
