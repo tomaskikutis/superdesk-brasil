@@ -1,0 +1,23 @@
+[{
+    "_id": "languages",
+    "display_name": "Languages",
+    "type": "manageable",
+    "unique_field": "qcode",
+    "selection_type": "multi selection",
+    "init_version": 2,
+    "service": {
+        "all": 1
+    },
+    "items": [
+        {
+            "name": "English",
+            "qcode": "en",
+            "is_active": true
+        },
+        {
+            "name": "Portuguese",
+            "qcode": "pt-BR",
+            "is_active": true
+        }
+    ]
+}]
