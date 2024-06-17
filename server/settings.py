@@ -87,7 +87,7 @@ VALIDATOR_MEDIA_METADATA = {
         "required": False,
     },
     "description_text": {
-        "required": False,
+        "required": True,
     },
     "copyrightholder": {
         "required": False,
@@ -105,3 +105,4 @@ VALIDATOR_MEDIA_METADATA = {
 }
 
 PUBLISH_QUEUE_EXPIRY_MINUTES = 60 * 24 * 15  # 15d
+KEYWORDS_ADD_MISSING_ON_PUBLISH=True
