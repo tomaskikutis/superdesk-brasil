@@ -8,9 +8,11 @@ module.exports = function(grunt) {
     return {
         apps: [
             'superdesk-publisher',
+            'superdesk.analytics'
         ],
         importApps: [
             'superdesk-publisher',
+            'superdesk-analytics'
         ],
         defaultRoute: '/workspace/personal',
         validatorMediaMetadata: {

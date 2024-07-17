@@ -32,7 +32,8 @@ if init_data.exists():
     INIT_DATA_PATH = init_data
 
 INSTALLED_APPS = [
-    "apps.languages"
+    "apps.languages",
+    "analytics"
 ]
 
 RENDITIONS = {
@@ -106,3 +107,10 @@ VALIDATOR_MEDIA_METADATA = {
 
 PUBLISH_QUEUE_EXPIRY_MINUTES = 60 * 24 * 15  # 15d
 KEYWORDS_ADD_MISSING_ON_PUBLISH=True
+
+ANALYTICS_ENABLE_SCHEDULED_REPORTS = strtobool(
+    env("ANALYTICS_ENABLE_SCHEDULED_REPORTS", "true")
+)
+ANALYTICS_ENABLE_ARCHIVE_STATS = strtobool(
+    env("ANALYTICS_ENABLE_ARCHIVE_STATS", "true")
+)
